@@ -1,9 +1,9 @@
 # Manage CloudRadial Desktop Tray Agent (PowerShell)
 
-![powershell](https://img.shields.io/badge/powershell-5.1%2B-6f42c1)
-![platform](https://img.shields.io/badge/platform-windows-6f42c1)
-![status](https://img.shields.io/badge/status-active--development-6f42c1)
-![license](https://img.shields.io/badge/license-MIT-6f42c1)
+![powershell](https://img.shields.io/badge/Powershell-5.1%2B-blue)
+![platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
+![version](https://img.shields.io/badge/Version-v1.1-purple)
+![license](https://img.shields.io/badge/License-MIT-green)
 
 A PowerShell script to **install or remove the CloudRadial Desktop Tray Agent** silently on Windows devices.  
 Designed for **enterprise, MSP, Intune, and RMM deployments** with robust logging and error handling.
@@ -57,3 +57,4 @@ $CloudRadialDesktopTray = "https://your-download-url/CloudRadialDesktopTrayAgent
 
 $UninstallerExe = "C:\Program Files (x86)\<Client Portal Directory>\unins000.exe"
 $UninstallArgs  = "/norestart /verysilent"
+
