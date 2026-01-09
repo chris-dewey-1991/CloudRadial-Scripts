@@ -1,9 +1,9 @@
 # Manage CloudRadial Agents (PowerShell)
 
-![powershell](https://img.shields.io/badge/powershell-5.1%2B-6f42c1)
-![platform](https://img.shields.io/badge/platform-windows-6f42c1)
-![status](https://img.shields.io/badge/status-active--development-6f42c1)
-![license](https://img.shields.io/badge/license-MIT-6f42c1)
+![powershell](https://img.shields.io/badge/Powershell-5.1%2B-blue)
+![platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
+![version](https://img.shields.io/badge/Version-v2.0-purple)
+![license](https://img.shields.io/badge/License-MIT-green)
 
 A unified PowerShell script to **install or remove CloudRadial agents** on Windows devices, including:
 
@@ -61,3 +61,4 @@ Edit the **USER CONTROLS** section at the top of the script before deployment.
 ```powershell
 $Action = 'Install'            # Install | Remove
 $Target = 'Both'               # DesktopTray | DataAgent | Both
+
