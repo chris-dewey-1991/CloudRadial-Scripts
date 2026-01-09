@@ -45,7 +45,7 @@ $DesktopTrayUninstallArgs  = "/norestart /verysilent"
 $DesktopTrayInstallArgs    = "/verysilent logging=true"
 
 # ---- Data Agent ----
-$CloudRadialDataAgentUrl   = "[URL to CloudRadial Desktop Tray Agent installer]"
+$CloudRadialDataAgentUrl   = "[URL to CloudRadial DataAgent installer]"
 $CompanyID                 = "[CompanyID]"
 
 # Optional Security Key (leave blank if not enabled)
@@ -308,3 +308,4 @@ catch {
     Write-Log "ERROR: $($_.Exception.Message)"
     throw
 }
+
