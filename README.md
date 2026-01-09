@@ -4,90 +4,67 @@
 ![platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
 ![license](https://img.shields.io/badge/License-MIT-green)
 
-A collection of **PowerShell scripts for managing CloudRadial components** on Windows devices, built for enterprise, MSP, Intune, and RMM deployments.
+A centralized collection of **PowerShell scripts for managing CloudRadial components** on Windows devices.
 
-This repository provides scripts to **install, remove, manage, and validate** CloudRadial agents in a reliable, repeatable, and fully silent manner.
-
----
-
-## Overview
-
-These scripts manage the lifecycle of CloudRadial components, including:
-
-- **CloudRadial Desktop Tray Agent**
-- **CloudRadial Data Agent**
-- Combined agent management
-- Installation validation and health checks (detection script)
-
-All scripts follow the same design principles:
-- Silent execution
-- Robust logging
-- Safe re-runs (idempotent behavior)
-- Explicit install and removal actions
-- Enterprise-friendly paths and conventions
+This repository is intended for **enterprise, MSP, and managed environments**, providing reliable automation for installing, removing, validating, and maintaining CloudRadial agents.
 
 ---
 
-## Included Scripts
+## Repository Purpose
 
-### 1. Manage-CloudRadial-DesktopTray.ps1
-Installs or removes the **CloudRadial Desktop Tray Agent**.
+The goal of this repository is to provide **production-ready PowerShell tooling** to manage the CloudRadial agent lifecycle in a consistent and repeatable way.
 
-**Capabilities**
-- Silent install
-- Silent uninstall
-- Download validation
-- Detailed logging
-
----
-
-### 2. Manage-CloudRadial-DataAgent.ps1
-Installs or removes the **CloudRadial Data Agent**.
-
-**Capabilities**
-- Silent install with `/companyid`
-- Optional `/securitykey` support
-- Windows service detection for validation
-- Silent uninstall with verification
+Scripts in this repository are designed to:
+- Run silently with no user interaction
+- Be safe to re-run (idempotent)
+- Support both installation and removal scenarios
+- Provide clear validation and error handling
+- Produce detailed logs for troubleshooting and audit purposes
 
 ---
 
-### 3. Manage-CloudRadial-Agents.ps1
-A **unified script** that manages both CloudRadial agents.
+## Scope
 
-**Capabilities**
-- Install or remove:
-  - Desktop Tray
-  - Data Agent
-  - Both
-- Unified logging
-- Per-agent targeting
-- Service-based validation for Data Agent
+This repository focuses on managing CloudRadial software components, including:
+- Desktop-based user agents
+- Background data collection agents
+- Supporting validation and detection logic
+
+It is designed to support the **full lifecycle** of CloudRadial deployments, from initial rollout through ongoing management and verification.
 
 ---
 
-### 4. Check-CloudRadial-Agents.ps1 (Coming Shortly)
-A detection and validation script designed to **check the health and presence** of CloudRadial components.
+## Design Principles
 
-**Planned Capabilities**
-- Detect installed agents
-- Verify Windows services
-- Validate expected install state
-- Return exit codes suitable for:
-  - Intune detection rules
-  - RMM health checks
-  - Compliance reporting
+All scripts in this repository follow the same core principles:
 
-> This script will be uploaded shortly and is intended to complement the install/remove scripts for full lifecycle management.
+- **Silent execution**  
+  Suitable for system-level deployment via MDM or RMM tools
+
+- **Explicit actions**  
+  Clear install, remove, and validation behavior
+
+- **Robust logging**  
+  Timestamped logs written locally for troubleshooting
+
+- **Enterprise-friendly paths**  
+  Consistent use of predictable directories
+
+- **Defensive execution**  
+  Validation of downloads, installers, services, and exit codes
 
 ---
 
-## Folder Structure
+## Environment & Deployment
 
-```text
-CloudRadial/
-├── Manage-CloudRadial-DesktopTray.ps1
-├── Manage-CloudRadial-DataAgent.ps1
-├── Manage-CloudRadial-Agents.ps1
-├── Check-CloudRadial-Agents.ps1   (upcoming)
-└── README.md
+These scripts are designed to be deployed using:
+
+- Microsoft Intune (Win32 apps or remediations)
+- RMM platforms
+- Group Policy startup scripts
+- Manual administrative execution
+
+They are suitable for use in:
+- Corporate environments
+- MSP-managed tenants
+- Hybrid and fully cloud-managed devices
