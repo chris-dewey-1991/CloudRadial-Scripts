@@ -2,7 +2,7 @@
 .NOTES
 ===========================================================================
 Name:           Check-CloudRadial-Agents
-Created by:     Chris Dewey at Net Primates
+Created by:     Chris Dewey
 Updated:        2026.01.08
 Version:        1.0
 Status:         Active/Development
@@ -167,3 +167,4 @@ if ($fails.Count -eq 0) {
     Write-Output "[FAILED] $($fails.Count) check(s) failed."
     #exit 2
 }
+
