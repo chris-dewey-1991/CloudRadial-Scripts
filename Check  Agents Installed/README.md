@@ -31,7 +31,7 @@ It is safe to run repeatedly and does **not** modify system state.
 
 Checks for exact DisplayName matches in the Windows uninstall registry (both 32-bit and 64-bit keys):
 
-- `Net Primates Limited Support Portal`
+- `[Client Portal Directory/Support Portal Name]`
 - `CloudRadial Agent`
 
 ---
@@ -41,7 +41,7 @@ Checks for exact DisplayName matches in the Windows uninstall registry (both 32-
 Confirms the existence of the following directories:
 
 - `C:\Program Files (x86)\CloudRadial Agent`
-- `C:\Program Files (x86)\Net Primates Limited Support Portal`
+- `C:\Program Files (x86)\[You Client Portal Directory]`
 
 ---
 
@@ -71,13 +71,13 @@ All configurable values are centralized at the **top of the script** for easy cu
 $MinUptimeMinutesToRun = 10
 
 $InstalledAppNames = @(
-    'Net Primates Limited Support Portal',
+    '[Client Portal Directory/Support Portal Name]',
     'CloudRadial Agent'
 )
 
 $FoldersToCheck = @(
     'C:\Program Files (x86)\CloudRadial Agent',
-    'C:\Program Files (x86)\Net Primates Limited Support Portal'
+    'C:\Program Files (x86)\[You Client Portal Directory]'
 )
 
 $TargetServiceNameExact      = 'CloudRadial'
